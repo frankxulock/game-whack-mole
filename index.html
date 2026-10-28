@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>打地鼠</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-meadow">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mole" viewBox="0 0 100 100">
+      <ellipse class="fur" cx="50" cy="62" rx="38" ry="44"/>
+      <circle class="fur" cx="22" cy="28" r="9"/>
+      <circle class="fur" cx="78" cy="28" r="9"/>
+      <circle class="ear" cx="22" cy="28" r="4.5"/>
+      <circle class="ear" cx="78" cy="28" r="4.5"/>
+      <ellipse class="face" cx="50" cy="60" rx="24" ry="22"/>
+      <g class="eyes">
+        <circle cx="38" cy="44" r="5"/>
+        <circle cx="62" cy="44" r="5"/>
+        <circle class="shine" cx="39.5" cy="42.5" r="1.6"/>
+        <circle class="shine" cx="63.5" cy="42.5" r="1.6"/>
+      </g>
+      <g class="dizzy">
+        <path d="M33 40 L43 48 M43 40 L33 48 M57 40 L67 48 M67 40 L57 48"/>
+      </g>
+      <ellipse class="nose" cx="50" cy="56" rx="7" ry="5"/>
+      <rect class="tooth" x="45" y="64" width="4.6" height="7" rx="1"/>
+      <rect class="tooth" x="50.4" y="64" width="4.6" height="7" rx="1"/>
+      <path class="mouth" d="M42 63 Q50 67 58 63"/>
+      <circle class="cheek" cx="30" cy="58" r="4"/>
+      <circle class="cheek" cx="70" cy="58" r="4"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="app" id="app">
+  <header class="head">
+    <div class="title">打地鼠</div>
+    <div class="stats">
+      <div class="stat"><span class="label">时间</span><span class="val" id="time">30</span></div>
+      <div class="stat"><span class="label">得分</span><span class="val" id="score">0</span></div>
+      <div class="stat"><span class="label">最高</span><span class="val" id="best">0</span></div>
+    </div>
+    <div class="bar"><div class="bar-fill" id="bar"></div></div>
+  </header>
+  <main class="stage" id="stage">
+    <div class="field" id="field"></div>
+    <div class="overlay" id="overlay">
+      <div class="ov-card">
+        <div class="ov-title" id="ov-title">打地鼠</div>
+        <div class="ov-text" id="ov-text">30 秒内尽量多敲地鼠<br>金色地鼠 +3 分</div>
+        <button type="button" class="btn" id="ov-btn">开始游戏</button>
+      </div>
+    </div>
+  </main>
+  <span class="badge" id="badge"></span>
+</div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="build-info.js"></script>
+<script src="sdk/tgmp-sdk.js"></script>
+<script src="logic.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
